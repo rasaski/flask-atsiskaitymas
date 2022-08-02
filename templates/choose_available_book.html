@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<form class="row g-3" method="post">
+    {% if message %}
+    <div>{{ message }}</div>
+    {% endif %}
+    {{ form.csrf_token }}
+    {{ form.book_id.label }} {{ form.book_id }}
+    {{ form.submit }}
+</form>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<form class="row g-3" method="post">
+    {% if message %}
+    <div>{{ message }}</div>
+    {% endif %}
+    {{ form.csrf_token }}
+    {{ form.authors.label }} {{ form.authors }}
+    {{ form.title.label }} {{ form.title }}
+    {{ form.submit }}
+</form>
+
+{% endblock %}
